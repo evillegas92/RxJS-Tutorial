@@ -1,10 +1,24 @@
-export const allReaders = [
+export interface IBook {
+  bookID: number;
+  title: string;
+  author: string;
+  publicationYear: number;
+};
+
+export interface IReader {
+  readerID: number;
+  name: string;
+  weeklyReadingGoal: number;
+  totalMinutesRead: number;
+};
+
+export const allReaders: IReader[] = [
     { readerID: 1, name: 'Marie', weeklyReadingGoal: 400, totalMinutesRead: 5600 },
     { readerID: 2, name: 'Daniel', weeklyReadingGoal: 210, totalMinutesRead: 3000 },
     { readerID: 3, name: 'Lanier', weeklyReadingGoal: 140, totalMinutesRead: 600 }
   ];
 
-export const allBooks = [
+export const allBooks: IBook[] = [
     { bookID: 1, title: 'Goodnight Moon', author: 'Margaret Wise Brown', publicationYear: 1953 },
     { bookID: 2, title: 'Winnie-the-Pooh', author: 'A. A. Milne', publicationYear: 1926 },
     { bookID: 3, title: 'Where the Wild Things Are', author: 'Maurice Sendak', publicationYear: 1963 },
